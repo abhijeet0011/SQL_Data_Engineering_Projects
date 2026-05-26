@@ -1,1 +1,1 @@
-SELECT 4 as output;
+SELECT 478 as output;
