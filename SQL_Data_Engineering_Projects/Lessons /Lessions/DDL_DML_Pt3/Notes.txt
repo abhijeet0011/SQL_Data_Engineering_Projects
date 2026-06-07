@@ -1,0 +1,7 @@
+/* MERGE-->Do  INSERT, UPDATE and DELETE together in one statement 
+WE will focus on BATCH processing now instead of Continuous processing as BATCH is more common
+We have to create a new table under main schema of job mart called priority_jobs_snapshot */
+
+/*First we need to create and make an initial load of data to the desired table. The idea is the source tables will be changed and the desired table will be updated automatically onwards
+The steps will be initial table, bacth load v1 and batch load v2
+In this case our source tables are job_postings_fact, company_dm (from data_jobs database) and priority_roles table from jobs_mart database */
