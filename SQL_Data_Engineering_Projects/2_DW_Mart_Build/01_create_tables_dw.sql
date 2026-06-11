@@ -1,9 +1,10 @@
 -- Step 1: DW - Create start schema tables
 
+--This drops need to be sequential as per the dependancies of one table to another
 DROP TABLE IF EXISTS skills_job_dim;
-DROP TABLE IF EXISTS skills_dim;
 DROP TABLE IF EXISTS job_postings_fact;
 DROP TABLE IF EXISTS company_dim;
+DROP TABLE IF EXISTS skills_dim;
 
 
 
@@ -16,7 +17,7 @@ CREATE TABLE company_dim (
 
 CREATE TABLE skills_dim(
     skill_id INTEGER PRIMARY KEY,
-    skill VARCHAR,
+    skills VARCHAR,
     type VARCHAR
 );
 
@@ -29,7 +30,7 @@ CREATE TABLE job_postings_fact(
     job_via VARCHAR,
     job_schedule_type VARCHAR,
     job_work_from_home BOOLEAN,
-    seacrh_location VARCHAR,
+    search_location VARCHAR,
     job_posted_date TIMESTAMP,
     job_no_degree_mention BOOLEAN,
     job_health_insurance BOOLEAN,
