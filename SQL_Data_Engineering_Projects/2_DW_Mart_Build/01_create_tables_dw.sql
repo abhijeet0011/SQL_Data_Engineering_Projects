@@ -62,4 +62,8 @@ Git branch creation:
 develop branch → git switch -c develop/project-2
 Like wise feature branch1: data-warehouse
 Now time to run the above script to create tables--> duckdb dw_marts.duckdb -c ".read 01_create_tables_dw.sql"
+Now time take the changes from local directory to local staging and then to local repo
+git add . 
+git commit -m "Creating DW star schema tables”
+
 */
