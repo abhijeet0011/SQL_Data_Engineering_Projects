@@ -1,3 +1,4 @@
+--To run this file: duckdb dw_marts.duckdb -c ".read build_marts.sql"      
 -- Step 1: DW- CReate Start Schema tables
 .read 01_create_tables_dw.sql
 

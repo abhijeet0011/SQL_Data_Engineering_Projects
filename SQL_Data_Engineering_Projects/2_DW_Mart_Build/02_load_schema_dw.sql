@@ -65,4 +65,18 @@ SELECT * from skills_dim Limit 2;
 SELECT * from job_postings_fact Limit 2;
 SELECT * from skills_job_dim Limit 2;
 
-
+--Data validation
+/*After commiting the changes with build_marts script time to 
+Validate data. For this lets not create and load data again and again
+and just validate inside here with duckdb commands
+For that we have to run several queries and lets
+point duckdb to our database to do that 
+The command is duckdb database_name
+*/
+SELECT 'Company Dim' AS table_name, COUNT(*) AS record_count FROM company_dim
+UNION ALL 
+SELECT 'Skill Dim', COUNT(*) FROM skills_dim
+UNION ALL 
+SELECT 'Job posting fact', COUNT(*) FROM job_postings_fact
+UNION ALL 
+SELECT 'Skill Job Dim', COUNT(*) FROM skills_job_dim;
